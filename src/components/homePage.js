@@ -1,6 +1,6 @@
 import Header from "./header";
 
-const HomePage = () => {
+export const HomePage = () => {
     return <div>
         <Header />
     </div>

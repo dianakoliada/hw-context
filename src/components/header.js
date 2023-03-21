@@ -1,9 +1,9 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import TextEdit from "./textEdit";
 import { ThemeContext } from '../providers/themeProv';
 import './header.css';
 
-const Header = () => {
+export const Header = () => {
     const themeCtx = useContext(ThemeContext); //подкллючаем контекст
 
     const handleThemeChangeToLight = () => {
@@ -21,7 +21,10 @@ const Header = () => {
                 <button onClick={handleThemeChangeToLight}>Light</button>
             </div>
             <div className={themeCtx.theme === 'day' ? 'day' : 'night'}>
-            <TextEdit />
+                <p id='indicator' className={themeCtx.theme === 'day' ? 'day' : 'night'}>
+                    {themeCtx.theme === 'day' ? 'Day' : 'Night'}    
+                </p>
+                <TextEdit />
             </div>
         </>
     )

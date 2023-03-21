@@ -1,16 +1,12 @@
-// import './App.css';
 import HomePage from "./components/homePage";
 import ThemeProvider from "./providers/themeProv";
-// import ValidationProvider from "./providers/validation";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <ThemeProvider>
-          {/* <ValidationProvider> */}
-            <HomePage />
-          {/* </ValidationProvider> */}
+          <HomePage />
         </ThemeProvider>
       </header>
     </div>

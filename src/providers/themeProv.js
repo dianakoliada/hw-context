@@ -4,13 +4,16 @@ export const ThemeContext = React.createContext();
 
 const ThemeProvider = (props) => {
     const [theme, setTheme] = useState('day');
+    const [val, setVal] = useState('Day');
 
     const changeThemeToLight = () => {
         setTheme('day');
+        setVal('Day');
     };
 
     const changeThemeToDark = () => {
         setTheme('night');
+        setVal('Night');
     };
 
     const getCxtValue = () => {
@@ -18,6 +21,7 @@ const ThemeProvider = (props) => {
             changeThemeToLight,
             changeThemeToDark,  //змінює тему
             theme,       //поточна тема
+            val,
         };
     };
 
